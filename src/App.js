@@ -1,5 +1,7 @@
 import React,{Component} from 'react'
-
+import Projects from "./Projects"
+import Profiles from "./SocialProfiles"
+import me from "./assets/me.jpg"
 
 
 
@@ -32,6 +34,7 @@ toggleDisplayBio=()=>{
     )
     return (
       <div>
+        <img src={me} alt='profile' className="profile"/>
         <h1>Hello</h1>
         <p>My name is Rohan. I am a Full stack web developer</p>
         <p>I'm always looking forward to working on meaningful projects!</p>
@@ -40,6 +43,10 @@ toggleDisplayBio=()=>{
             <button onClick={this.toggleDisplayBio}>Read more</button>
           </div>
         }
+        <hr />
+        <Projects />
+        <hr />
+        <Profiles />
       </div>
     )
   }
