@@ -1,9 +1,9 @@
 import React,{Component} from 'react'
 import Projects from "./Projects"
 import Profiles from "./SocialProfiles"
-import me from "./assets/me.jpg"
-
-
+import me from "../assets/me.jpg"
+import Title from './Title'
+// import Header from './Header'
 
 class App extends Component{
   state={displayBio:false}
@@ -34,9 +34,11 @@ toggleDisplayBio=()=>{
     )
     return (
       <div>
+
         <img src={me} alt='profile' className="profile"/>
         <h1>Hello</h1>
-        <p>My name is Rohan. I am a Full stack web developer</p>
+        <p>My name is Rohan. </p>
+        <Title />
         <p>I'm always looking forward to working on meaningful projects!</p>
         {this.state.displayBio?bio:
           <div>
@@ -47,10 +49,13 @@ toggleDisplayBio=()=>{
         <Projects />
         <hr />
         <Profiles />
+
       </div>
     )
   }
 
 }
+
+
 
 export default App
